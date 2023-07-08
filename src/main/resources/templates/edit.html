@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Update people</title>
+</head>
+<body>
+<h1>Create or update</h1>
+<div>
+    <form th:action="@{/edit}" th:object="${user}" method="post">
+
+        <div>
+            <input th:field="*{id}"hidden/>
+        </div>
+
+        <div style="margin-bottom: 10px">
+            <input th:field="*{name}" placeholder="name"/>
+        </div>
+
+        <div style="margin-bottom: 10px">
+            <input th:field="*{age}" placeholder="age"/>
+        </div>
+
+        <div style="margin-bottom: 10px">
+            <input th:field="*{email}" placeholder="email@mail.ru"/>
+        </div>
+
+        <div style="margin-top: 25px">
+            <div>
+                <button type="submit">PUSH</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+</body>
+</html>
